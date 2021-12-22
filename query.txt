@@ -1,0 +1,33 @@
+query
+        {
+            repository(owner: "CHANGE THIS TO REPO OWNER", name: "CHANGE THIS TO REPO NAME")
+            {
+                description,
+                dependencyGraphManifests
+                {
+                    edges
+                    {
+                        node
+                        {
+                            blobPath
+                            dependencies
+                            {
+                                totalCount
+                                nodes
+                                {
+                                    packageName
+                                    hasDependencies
+                                    packageManager
+                                    repository
+                                    {
+                                        isPrivate
+                                        nameWithOwner
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
